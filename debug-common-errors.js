@@ -25,8 +25,8 @@ Think about which debugging methods you found most useful and how you might appl
 // This program is intended to display a simple prompt in the console but fails to run.
 
 console.log("Welcome to the bootcamp
-
-// What’s Wrong?
+console.log("Welcome to the bootcamp"); //correct format
+// What’s Wrong? Syntax error because its missing closing quotation mark, parenthesis, and semicolon
 
 
 // Program B
@@ -39,7 +39,18 @@ for (let i = 0; i < numbers.length; i++) {
   console.log(doubled);
 }
 
-// What’s Wrong?
+// What’s Wrong? Runtime Error because "eight" is NaN 
+// corrected: 
+let numbers = [2, 4, "eight"];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (typeof numbers[i] === "number") {
+    let doubled = numbers[i] * 2;
+    console.log(doubled);
+  } else {
+    console.log(`Skipping invalid number: ${numbers[i]}`);
+  }
+}
 
 
 
@@ -59,4 +70,4 @@ function isPrime(num) {
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? logic error considering the code ran but unsure of correct answer. 
